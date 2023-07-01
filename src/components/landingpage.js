@@ -7,20 +7,20 @@ import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-
 
 const LandingPage = () => {
 
-  
-
-  // Define the click handler function
   const handleClick = (e) => {
     e.preventDefault();
 
     // Add the 'clicked' class to the clicked element
     e.currentTarget.classList.add('clicked');
+    e.currentTarget.querySelector('.arrow path').classList.add('clicked');
 
     // Remove the class after the animation duration (in this case, 1s)
     setTimeout(() => {
       e.currentTarget.classList.remove('clicked');
+      e.currentTarget.querySelector('.arrow path').classList.remove('clicked');
     }, 400);
-  };
+};
+
 
   return (
     <div className="background"> {/* Background */}

@@ -47,15 +47,16 @@
     z-index: 1;
     top: -60px; 
     left: 0; 
+    font-size: 5rem;
 }
 
 /* 'Hello I'm' for larger screens (no overlap)*/
 .hello-container.d-none {
     writing-mode: vertical-rl;
+    font-size: min(max(8rem, 10vw), 9rem);
 }
   
 .hello {
-    font-size: min(max(5rem, 10vw), 9rem);
     color: rgba(255, 255, 255, 0.199);
     font-family: 'AlbraBlack';
 }
@@ -136,6 +137,7 @@
 
 .tabs:hover .arrow path {
     fill: rgb(54, 83, 224);
+    transition: ease-in-out .2s;
 }
 
 /* Add a new keyframes animation for the pulse effect */
