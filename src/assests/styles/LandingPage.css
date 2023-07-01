@@ -140,6 +140,27 @@
     transition: ease-in-out .2s;
 }
 
+/* Define the animation on the clicked class */
+.clicked {
+    animation: pulse .6s ease-in-out;
+    fill: currentColor;  /* SVG will inherit this color */
+}
+
+.tabs.clicked {
+    animation: pulse .6s ease-in-out;
+    color: currentColor;
+}
+
+.arrow.clicked path {
+    animation: pulse .6s ease-in-out;
+    fill: currentColor;
+}
+
+.button-text.clicked {
+    animation: pulse .6s ease-in-out;
+    color: currentColor;
+}
+  
 /* Add a new keyframes animation for the pulse effect */
 @keyframes pulse {
     0% {
@@ -159,6 +180,6 @@
   /* Define the animation on the clicked class */
   .clicked {
     animation: pulse .6s ease-in-out;
-    fill: currentColor;  /* SVG will inherit this color */
-  }
+    fill: currentColor;
+}
   
