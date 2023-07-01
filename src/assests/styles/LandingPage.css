@@ -158,7 +158,7 @@
   
   /* Define the animation on the clicked class */
   .clicked {
-    animation: pulse .4s ease-in-out;
+    animation: pulse .6s ease-in-out;
     fill: currentColor;  /* SVG will inherit this color */
   }
   

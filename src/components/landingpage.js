@@ -12,14 +12,22 @@ const LandingPage = () => {
 
     // Add the 'clicked' class to the clicked element
     e.currentTarget.classList.add('clicked');
-    e.currentTarget.querySelector('.arrow path').classList.add('clicked');
 
-    // Remove the class after the animation duration (in this case, 1s)
+    // Check if the SVG path exists
+    const svgPath = e.currentTarget.querySelector('.arrow path');
+    if (svgPath) {
+        svgPath.classList.add('clicked');
+    }
+
+    // Remove the class after the animation duration (in this case, 0.6s)
     setTimeout(() => {
       e.currentTarget.classList.remove('clicked');
-      e.currentTarget.querySelector('.arrow path').classList.remove('clicked');
-    }, 400);
-};
+      if (svgPath) {
+          svgPath.classList.remove('clicked');
+      }
+    }, 600);
+  };
+
 
 
   return (
