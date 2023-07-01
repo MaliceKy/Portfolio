@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'AlbraBlack';
+    src: url('../fonts/AlbraBlack.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AlbraBook-Light';
+    src: url('../fonts/AlbraBook-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'IsidoraSansAlt';
+    src: url('../fonts/IsidoraSansAlt-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'IsidoraSansAlt-Light';
+    src: url('../fonts/IsidoraSansAlt-Light.ttf') format('truetype');
+}
