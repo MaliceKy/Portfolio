@@ -47,8 +47,12 @@ const LandingPage = () => {
             <p className="Title-Desc">Web development enthusiast, proficient in JavaScript, CSS, HTML, and React, pursuing a Bachelor's in Computer Science. Ambitious, challenge-seeking, and eager to innovate in the dynamic web industry. Simple, direct, future-focused. Let's connect.</p>
             <row>
               <div className="col-12">
-                <LinkedInIcon onClick={handleClick} className="social-icon linkedin-icon" />
-                <GitHubIcon onClick={handleClick} className="social-icon github-icon" />
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <LinkedInIcon onClick={handleClick} className="social-icon linkedin-icon" />
+                </a>
+                <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+                  <GitHubIcon onClick={handleClick} className="social-icon github-icon" />
+                </a>
               </div>
             </row>
             <div className="buttonContainer"> {/* Buttons */}
