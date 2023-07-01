@@ -42,20 +42,20 @@
     z-index: 1;
 }
 
-/* 'Hello I'm' for small screens */
+/* 'Hello I'm' for small screens (overlapped)*/
 .hello-container.position-absolute {
     z-index: 1;
-    /* Your existing styles for this class, e.g., positioning */
+    top: -60px; 
+    left: 0; 
 }
 
-/* 'Hello I'm' for larger screens */
+/* 'Hello I'm' for larger screens (no overlap)*/
 .hello-container.d-none {
     writing-mode: vertical-rl;
-    /* Your styles for this class when it should not overlap */
 }
   
 .hello {
-    font-size: min(max(5rem, 15vw), 9rem);
+    font-size: min(max(5rem, 10vw), 9rem);
     color: rgba(255, 255, 255, 0.199);
     font-family: 'AlbraBlack';
 }
@@ -93,9 +93,16 @@
     transform: scale(1.20);
     fill: rgb(54, 83, 224);
 }
+/* Button container */
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 1px solid #ffffff;
+}
 
 /* About Me Button */
-.About-tab {
+.tabs {
     background: transparent;
     border: none;
     text-decoration: none;
@@ -103,14 +110,15 @@
     font-family: 'IsidoraSansAlt', 'IsidoraSansAlt-Light';
     font-weight: 600;
     transition: ease-in-out .2s;
+    margin-left: 10px;
 }
 
-.About-tab .arrow path {
+.tabs .arrow path {
     fill: rgb(255, 255, 255);
     transition: ease-in-out .2s;
 }
 
-.About-tab .arrow {
+.tabs .arrow {
     width: 24px;
     height: 24px;
     vertical-align: center;
@@ -118,15 +126,15 @@
     transition: transform .2s ease-in-out;
 }
 
-.About-tab:hover .arrow {
+.tabs:hover .arrow {
     transform: translateX(10px);
 }
 
-.About-tab:hover {
+.tabs:hover {
     color: rgb(54, 83, 224);
 }
 
-.About-tab:hover .arrow path {
+.tabs:hover .arrow path {
     fill: rgb(54, 83, 224);
 }
 

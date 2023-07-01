@@ -23,17 +23,17 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="background">
+    <div className="background"> {/* Background */}
       <div className="container position-relative">
         {/* 'Hello I'm' for small screens */}
-        <div className="hello-container position-absolute w-100 d-block d-sm-none">
+        <div className="hello-container position-absolute w-100 d-block d-md-none">
           <div className="hello">Hello I'm</div>
         </div>
         {/* 'Hello I'm' for larger screens */}
-        <div className="hello-container d-none d-sm-block">
+        <div className="hello-container d-none d-md-block">
           <div className="hello">Hello I'm</div>
         </div>
-        <div className="main-content position-relative">
+        <div className="main-content position-relative"> {/* Main Contents */}
           <div className="content-container">
             <h1 className="Title">Kyle Malice</h1>
             <p className="Title-Desc">Web development enthusiast, proficient in JavaScript, CSS, HTML, and React, pursuing a Bachelor's in Computer Science. Ambitious, challenge-seeking, and eager to innovate in the dynamic web industry. Simple, direct, future-focused. Let's connect.</p>
@@ -43,10 +43,20 @@ const LandingPage = () => {
                 <GitHubIcon onClick={handleClick} className="social-icon github-icon" />
               </div>
             </row>
-            <button href="#" className="About-tab" onClick={handleClick}>
-              More About Me.
-              <ArrowRightIcon className="arrow" />
-            </button>
+            <div className="buttonContainer"> {/* Buttons */}
+              <button href="#" className="tabs" onClick={handleClick}>
+                More About Me.
+                <ArrowRightIcon className="arrow" />
+              </button>
+              <button href="#" className="tabs" onClick={handleClick}>
+                Past Projects.
+                <ArrowRightIcon className="arrow" />
+              </button>
+              <button href="#" className="tabs" onClick={handleClick}>
+                Contact.
+                <ArrowRightIcon className="arrow" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
