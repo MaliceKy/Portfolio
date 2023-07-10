@@ -1,5 +1,7 @@
+// src/components/landingpage.js
 import React, { useState, useEffect } from 'react';
-import "../assests/styles/LandingPage.css";
+import { Link, useNavigate } from 'react-router-dom';
+import "../assests/styles/landingpage.css";
 import { ReactComponent as LinkedInIcon } from '../assests/images/LinkedIn.svg';
 import { ReactComponent as GitHubIcon } from '../assests/images/Github.svg';
 import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-right.svg';
@@ -7,17 +9,12 @@ import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-
 const LandingPage = () => {
   const [clicked, setClicked] = useState({});
   const [redirect, setRedirect] = useState(null);
+  const navigate = useNavigate();
 
   const handleSocialClick = (e, href, social) => {
     e.preventDefault();
     setClicked(prev => ({ ...prev, [social]: true }));
     setRedirect(href);
-  };
-
-  const handleButtonClick = (e, button, text) => {
-    e.preventDefault();
-    setClicked(prev => ({ ...prev, [button]: true, [text]: true }));
-    // Code for handling button click goes here
   };
 
   useEffect(() => {
@@ -58,18 +55,19 @@ const LandingPage = () => {
               </div>
             </div>
             <div className="buttonContainer">
-            <button href="#" className={`tabs ${clicked['about'] ? 'clicked' : ''}`} onClick={(e) => handleButtonClick(e, 'aboutButton', 'aboutText')}>
-              <span className={`button-text ${clicked['aboutText'] ? 'clicked' : ''}`}>More About Me.</span>
-              <ArrowRightIcon className={`arrow ${clicked['aboutButton'] ? 'clicked' : ''}`} />
-            </button>
-            <button href="#" className={`tabs ${clicked['projects'] ? 'clicked' : ''}`} onClick={(e) => handleButtonClick(e, 'projectsButton', 'projectsText')}>
-              <span className={`button-text ${clicked['projectsText'] ? 'clicked' : ''}`}>Past Projects.</span>
-              <ArrowRightIcon className={`arrow ${clicked['projectsButton'] ? 'clicked' : ''}`} />
-            </button>
-            <button href="#" className={`tabs ${clicked['contact'] ? 'clicked' : ''}`} onClick={(e) => handleButtonClick(e, 'contactButton', 'contactText')}>
-              <span className={`button-text ${clicked['contactText'] ? 'clicked' : ''}`}>Contact.</span>
-              <ArrowRightIcon className={`arrow ${clicked['contactButton'] ? 'clicked' : ''}`} />
-            </button>
+              <Link to="/about" className={`tabs ${clicked['about'] ? 'clicked' : ''}`} onClick={() => navigate('/about')}>
+                <span className={`button-text ${clicked['aboutText'] ? 'clicked' : ''}`}>More About Me.</span>
+                <ArrowRightIcon className={`arrow ${clicked['aboutButton'] ? 'clicked' : ''}`} />
+              </Link>
+              <Link to="/projects" className={`tabs ${clicked['projects'] ? 'clicked' : ''}`} onClick={() => navigate('/projects')}>
+                <span className={`button-text ${clicked['projectsText'] ? 'clicked' : ''}`}>Past Projects.</span>
+                <ArrowRightIcon className={`arrow ${clicked['projectsButton'] ? 'clicked' : ''}`} />
+              </Link>
+              <a href="mailto:Malice.Kyle@gmail.com" className={`tabs ${clicked['contact'] ? 'clicked' : ''}`}>
+                <span className={`button-text ${clicked['contactText'] ? 'clicked' : ''}`}>Get In Contact.</span>
+                <ArrowRightIcon className={`arrow ${clicked['contactButton'] ? 'clicked' : ''}`} />
+              </a>
+
 
             </div>
           </div>
@@ -80,3 +78,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
