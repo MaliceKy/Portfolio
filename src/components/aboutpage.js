@@ -39,10 +39,6 @@ const About = () => {
                             <span className={`button-text ${clicked['homeText'] ? 'clicked' : ''}`}>Back to Home.</span>
                             <ArrowRightIcon className={`arrow ${clicked['homeButton'] ? 'clicked' : ''}`} />
                         </Link>
-                        <Link to="/about" className={`tabs ${clicked['about'] ? 'clicked' : ''}`} onClick={() => navigate('/about')}>
-                            <span className={`button-text ${clicked['aboutText'] ? 'clicked' : ''}`}>More About Me.</span>
-                            <ArrowRightIcon className={`arrow ${clicked['aboutButton'] ? 'clicked' : ''}`} />
-                        </Link>
                         <Link to="/projects" className={`tabs ${clicked['projects'] ? 'clicked' : ''}`} onClick={() => navigate('/projects')}>
                             <span className={`button-text ${clicked['projectsText'] ? 'clicked' : ''}`}>Past Projects.</span>
                             <ArrowRightIcon className={`arrow ${clicked['projectsButton'] ? 'clicked' : ''}`} />
