@@ -54,6 +54,7 @@ const LandingPage = () => {
                 </a>
               </div>
             </div>
+            
             <div className="buttonContainer">
               <Link to="/about" className={`tabs ${clicked['about'] ? 'clicked' : ''}`} onClick={() => navigate('/about')}>
                 <span className={`button-text ${clicked['aboutText'] ? 'clicked' : ''}`}>More About Me.</span>
@@ -67,9 +68,8 @@ const LandingPage = () => {
                 <span className={`button-text ${clicked['contactText'] ? 'clicked' : ''}`}>Get In Contact.</span>
                 <ArrowRightIcon className={`arrow ${clicked['contactButton'] ? 'clicked' : ''}`} />
               </a>
-
-
             </div>
+
           </div>
         </div>
       </div>

@@ -6,11 +6,11 @@
         linear-gradient(0deg, transparent 99%, rgba(255, 255, 255, 0.20) 1%),
         linear-gradient(90deg, transparent 99%, rgb(255, 255, 255, 0.20) 1%);
     background-size: 90px 90px;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    min-height: 100vh;
     z-index: 0;
 }
 
@@ -36,6 +36,8 @@
     color: white;
     z-index: 2;
     margin-left: 40px;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
 }
   
 .about-hello-container {
@@ -46,9 +48,10 @@
 /* 'Hello I'm' for small screens (overlapped)*/
 .about-hello-container.position-absolute {
     z-index: 1;
-    top: -50px; 
+    top: -40px; 
     left: 0; 
-    font-size: 5rem;
+    font-size: 3.75rem;
+    white-space: nowrap;
 }
 
 /* 'Hello I'm' for larger screens (no overlap)*/
@@ -61,8 +64,6 @@
     font-size: min(max(7rem, 10vw), 9rem);
     white-space: nowrap;
 }
-
-
   
 .about-hello {
     color: rgba(255, 255, 255, 0.199);
@@ -86,4 +87,12 @@
     font-family: 'AlbraBook-Light';
     font-size: 1.1rem;
     margin-inline-end: 35%;
+}
+
+.about-buttonContainer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 1px solid #ffffff;
 }
