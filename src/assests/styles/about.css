@@ -1,0 +1,89 @@
+ /* Background */
+ .about-background {
+    /* Grid */
+    background-color: #000000;
+    background-image: 
+        linear-gradient(0deg, transparent 99%, rgba(255, 255, 255, 0.20) 1%),
+        linear-gradient(90deg, transparent 99%, rgb(255, 255, 255, 0.20) 1%);
+    background-size: 90px 90px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+}
+
+.about-background::after {
+    /* Vignette */
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.799));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.about-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 2;
+    margin-left: 40px;
+}
+  
+.about-hello-container {
+    align-self: center;
+    z-index: 1;
+}
+
+/* 'Hello I'm' for small screens (overlapped)*/
+.about-hello-container.position-absolute {
+    z-index: 1;
+    top: -50px; 
+    left: 0; 
+    font-size: 5rem;
+}
+
+/* 'Hello I'm' for larger screens (no overlap)*/
+.about-hello-container.d-none {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    font-size: min(max(7rem, 10vw), 9rem);
+    white-space: nowrap;
+}
+
+
+  
+.about-hello {
+    color: rgba(255, 255, 255, 0.199);
+    font-family: 'AlbraBlack';
+}
+  
+.about-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+/* General Info */
+.about-Title {
+    font-size: 3.2rem;
+    font-family: 'IsidoraSansAlt';
+}  
+
+.about-Title-Desc {
+    font-family: 'AlbraBook-Light';
+    font-size: 1.1rem;
+    margin-inline-end: 35%;
+}
