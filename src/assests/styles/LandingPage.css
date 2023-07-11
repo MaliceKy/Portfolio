@@ -1,29 +1,9 @@
  /* Background */
  .background {
-    /* Grid */
-    background-color: #000000;
-    background-image: 
-        linear-gradient(0deg, transparent 99%, rgba(255, 255, 255, 0.20) 1%),
-        linear-gradient(90deg, transparent 99%, rgb(255, 255, 255, 0.20) 1%);
-    background-size: 90px 90px;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 0;
-}
-
-.background::after {
-    /* Vignette */
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.799));
-    pointer-events: none;
     z-index: 1;
 }
 
@@ -34,6 +14,8 @@
     align-items: center;
     justify-content: center;
     color: white;
+    overflow: auto;
+    height: 100vh;
     z-index: 2;
 }
   
@@ -45,15 +27,24 @@
 /* 'Hello I'm' for small screens (overlapped)*/
 .hello-container.position-absolute {
     z-index: 1;
-    top: -60px; 
-    left: 0; 
+    top: 17vh;
+    left: 0;
     font-size: 5rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 375px) {
+    .hello-container.position-absolute {
+      font-size: 4rem; /* smaller size for small screens */
+      top: 10vh; /* adjust as per your preference */
+    }
 }
 
 /* 'Hello I'm' for larger screens (no overlap)*/
 .hello-container.d-none {
     writing-mode: vertical-rl;
     font-size: min(max(8rem, 10vw), 9rem);
+    white-space: nowrap;
 }
   
 .hello {

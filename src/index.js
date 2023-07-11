@@ -8,15 +8,31 @@ import 'bootstrap/dist/css/bootstrap.css';
 // global imports
 import './assests/styles/fonts.css'
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Create a separate component for the background
+function Background() {
+  return (
+    <div className="background">
+      <Content />
+    </div>
+  );
+}
+
+// Create a separate component for the content
+function Content() {
+  return (
+    <div className="content">
+      <App />
+    </div>
+  );
+}
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Background />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

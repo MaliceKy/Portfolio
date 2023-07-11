@@ -1,13 +1,44 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  overflow: hidden; /* disable scroll on the body */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100%;
 }
+
+.background {
+  position: fixed; /* this will fix the background */
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: 
+    linear-gradient(0deg, transparent 99%, rgba(255, 255, 255, 0.20) 1%),
+    linear-gradient(90deg, transparent 99%, rgba(255, 255, 255, 0.20) 1%);
+  background-size: 90px 90px;
+  z-index: 0;
+}
+
+.background::after {
+  /* Vignette */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.799));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  position: relative; /* make sure the content is above the background */
+  z-index: 1;
+  height: 100%;
+  overflow: auto; /* enable scroll on the content */
+}
+
+
