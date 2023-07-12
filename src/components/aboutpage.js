@@ -33,8 +33,13 @@ const About = () => {
 
                     <div className="glass">
                         <h1 className="about-Title">Education.</h1>
-                        <p className="about-Title-Desc">Currently enrolled at Delaware Technical Community College in 2020 and will complete my coursework there at the end of 2023. Following this, I’m attending the University of Delaware from 2024 to 2025, to receive a Bachelor's degree in Computer and Information Sciences. During my time at Delaware Technical Community College, I have been immersed in a blend of theoretical learning and practical application. I have completed courses such as Computer Science I-III and Computer Organization, which have provided me with a comprehensive understanding of computer hardware and software. These classes have allowed me to work and progressively build up real-world applications. For instance, I've had the opportunity to work with assembly code, develop software applications in JavaFX, use an Ultrasonic Distance Sensor to display distance measurements on an LCD screen connected to my Raspberry Pi, and work with classmates to collaborate using React to build a school portal for the fictional school of Hogwarts University. In my spare time, I enjoy working on side projects that allow me to practice and hone my skills in front-end development. These projects not only reinforce what I've learned in my classes but also provide me with hands-on experience in solving real-world problems. These experiences have not only deepened my technical skills but also honed my ability to collaborate effectively on team projects. I am confident that the knowledge and skills I've acquired thus far will form a solid foundation for my future studies and career as a Frontend Developer.</p>
+                        <p className="about-Title-Desc"> 
+                            - Delaware Technical Community College: Enrolled in 2020, completing coursework in 2023.
+                            <br />
+                            - University of Delaware: Attending from 2024 to 2025, pursuing a Bachelor's degree in Computer and Information Sciences. 
+                        </p>
                     </div>
+
 
                     <div className="glass">
                         <h1 className="about-Title">Hobbies.</h1>
