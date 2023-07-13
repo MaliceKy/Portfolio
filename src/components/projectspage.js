@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <div>
       <h1 className='TitleProject'>Projects.</h1>
-      <div className="row justify-content-center">
+      <div className="row mx-auto">
         {projectData.map((project, index) => (
           <div className="col-12 col-md-6" key={index}>
             <div className="project-card mx-auto">

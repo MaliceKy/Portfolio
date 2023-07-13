@@ -1,4 +1,8 @@
-.TitleProject{
+body {
+  overflow-x: hidden;
+}
+
+.TitleProject {
   font-size: 4rem;
   font-family: 'IsidoraSansAlt';
   color: white;
@@ -6,26 +10,19 @@
   text-align: center;
 }
 
-.row {
+.project-card {
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-.project-card {
-position: relative;
-overflow: hidden;
-margin: 20px;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  flex-direction: column;
 }
 
 .project-image {
   position: relative;
-  height: 240px;
+  min-height: 210px;
   width: 360px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -69,4 +66,10 @@ flex-direction: column;
   font-family: 'AlbraBook-Light';
   font-size: 0.8em;
   filter: drop-shadow(5px 5px 10px #000);
+}
+
+@media (max-width: 821px) {
+  .project-info {
+    opacity: 1;
+  }
 }
