@@ -22,6 +22,10 @@ const Projects = () => {
   return (
     <div>
       <h1 className='TitleProject'>Projects.</h1>
+
+      <h1 className="project-verticalText-top w-100 d-md-none">Projects.</h1>
+      <h1 className="project-verticalText-side d-none d-md-block">Projects.</h1>
+
       <div className="row mx-auto">
         {projectData.map((project, index) => (
           <div className="col-12 col-md-6" key={index}>
