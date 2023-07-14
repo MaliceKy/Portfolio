@@ -1,31 +1,93 @@
-.navbar {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 17%;
-    transform: translateY(-50%);
-    background: none;
+/* This section styles the entire Navbar. It makes the Navbar fixed at the top, 
+   stretches it to full width, removes the background, and adds a white border. */
+   .custom-navbar {
+    position: fixed;
+    width: 50%;
+    left: 50%;
+    height: 100%;
+    background: none !important;
     z-index: 999;
-    padding-right: 15rem;
-}
-
-.navbar-nav {
-    list-style: none;
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
+    align-items: flex-start;
+    padding-right: 5%;
 }
 
-.nav-link{
-    color: #ffffff;
+/* This section styles the links in the Navbar. It changes the text color to white, 
+   removes the underline, and sets the font family. */
+.custom-navbar .nav-link {
+    color: #ffffff !important;
     text-decoration: none;
     font-family: 'IsidoraSansAlt';
-    left: 20%;
+    padding-top: 20%;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-    color: rgb(54, 83, 224);
+/* This section styles the links in the Navbar when they are hovered over or focused. 
+   It changes the text color to blue. */
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+    color: rgb(54, 83, 224) !important;
 }
 
+/* This section styles the hamburger menu (custom button). 
+   It changes the border color to white to make the icon visible against the transparent background. */
+.custom-toggler {
+    position: absolute;
+    padding-top: 10%;
+    right: 10px; /* Adjust this value as needed */
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 999;
+    padding-right: 5%;
+}
+
+.custom-toggler div {
+    width: 25px;
+    height: 2.5px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 2px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.custom-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-toggler.open div:nth-child(1) {
+    transform: translateY(9px) rotate(-45deg);
+}
+.custom-toggler.open div:nth-child(2) {
+    opacity: 0;
+}
+.custom-toggler.open div:nth-child(3) {
+    transform: translateY(-7.5px) rotate(45deg);
+}
+
+/* This section styles the mobile-nav. */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+    background: hsl(0, 0%, 15%); /* Change to desired color */
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    padding: 20px;
+    overflow: auto;
+    z-index: 990;
+}
+
+.mobile-nav.open {
+    transform: translateX(0);
+}
+
+/* Style the navlinks */
+.mobile-nav .nav-link {
+    color: #ffffff;
+    font-size: 20px; /* Adjust as needed */
+    margin-top: 20%;
+}
