@@ -14,7 +14,7 @@ const projectData = [
   {
     title: 'Project 2',
     description: 'This is a description for Project 2.',
-    image: 'link-to-project-2-image.jpg'
+    image: VaultWiseGif
   },
 ];
 

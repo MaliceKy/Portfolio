@@ -1,7 +1,7 @@
 // src/components/landingpage.js
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import "../assests/styles/landingpage.css";
+import "../assests/styles/landing.css";
 import { ReactComponent as LinkedInIcon } from '../assests/images/LinkedIn.svg';
 import { ReactComponent as GitHubIcon } from '../assests/images/Github.svg';
 import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-right.svg';
@@ -34,13 +34,6 @@ const LandingPage = () => {
   return (
     <div className="background">
       <div className="container position-relative">
-        <div className="hello-container position-absolute w-100 d-block d-md-none">
-          <div className="hello">Hello I'm</div>
-        </div>
-        <div className="hello-container d-none d-md-block">
-          <div className="hello">Hello I'm</div>
-        </div>
-        <div className="main-content position-relative">
           <div className="content-container">
             <h1 className="Title">Kyle Malice</h1>
             <p className="Title-Desc">Web development enthusiast, proficient in JavaScript, CSS, HTML, and React, pursuing a Bachelor's in Computer Science. Ambitious, challenge-seeking, and eager to innovate in the dynamic web industry. Simple, direct, future-focused. Let's connect.</p>
@@ -69,9 +62,7 @@ const LandingPage = () => {
                 <ArrowRightIcon className={`arrow ${clicked['contactButton'] ? 'clicked' : ''}`} />
               </a>
             </div>
-
           </div>
-        </div>
       </div>
     </div>
   );

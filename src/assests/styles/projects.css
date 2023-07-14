@@ -35,14 +35,18 @@ body {
   text-align: center;
 }
 
+.row {
+  max-width: 800px; /* Adjust this value to suit your design */
+}
+
 .project-card {
   position: relative;
   overflow: hidden;
-  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 20px auto; /* Vertically 20px margin and horizontally auto to center the card */
 }
 
 .project-image {
