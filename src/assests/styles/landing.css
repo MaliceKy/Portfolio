@@ -37,9 +37,9 @@
     writing-mode: vertical-rl;
     position: relative; 
     font-size: 150px; 
-    color: rgba(255, 255, 255, 0.15);    
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'AlbraBlack';   
     white-space: nowrap;
-    font-family: 'IsidoraSansAlt';
     transform: rotate(180deg);
     left: 10%;
 }
@@ -50,10 +50,10 @@
     top: -50px;
     left: 0;
     font-size: 5rem; 
-    color: rgba(255, 255, 255, 0.15); 
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'AlbraBlack'; 
     z-index: -1;  
     white-space: nowrap;
-    font-family: 'IsidoraSansAlt';
   }
 
 
