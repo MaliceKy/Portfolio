@@ -15,7 +15,7 @@ const NavBar = () => {
                     <Link className="nav-link" to="/projects">Projects</Link>
                 </li>
                 <li className="nav-item">
-                    <a href="mailto:..." className="nav-link">Contact</a> 
+                    <a href="mailto:Malice.Kyle@gmail.com" className="nav-link">Contact</a> 
                 </li>
 
             </ul>
