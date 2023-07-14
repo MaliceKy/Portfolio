@@ -45,7 +45,7 @@
 }
   
 .about-hello {
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.15);
     font-family: 'AlbraBlack';
     text-align: start;
 }
@@ -71,7 +71,7 @@
     margin-inline-end: 20%;
     border-radius: 15px;
     padding: 10px;
-    border: 2px dashed rgba(255, 255, 255, 0.517);
+    border: 2px dashed rgba(255, 255, 255, 0.5);
 }
 
 .about-buttonContainer{

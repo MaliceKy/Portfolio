@@ -15,11 +15,11 @@ body {
   left: 10%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(-90deg);
-  font-size: 150px; 
-  color: rgba(255, 255, 255, 0.15);  
+  font-size: 150px;  
   z-index: -1;  
   white-space: nowrap;
-  font-family: 'IsidoraSansAlt';
+  color: rgba(255, 255, 255, 0.2);
+  font-family: 'AlbraBlack';
 }
 
 /* 'Hello I'm' for small screens (overlapped)*/
@@ -28,11 +28,11 @@ body {
   top: 16vh;
   left: 0px;
   font-size: 5rem; 
-  color: rgba(255, 255, 255, 0.15); 
   z-index: -1;  
   white-space: nowrap;
-  font-family: 'IsidoraSansAlt';
   text-align: center;
+  color: rgba(255, 255, 255, 0.15);
+  font-family: 'AlbraBlack';
 }
 
 .row {

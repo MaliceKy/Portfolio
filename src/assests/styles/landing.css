@@ -37,7 +37,7 @@
     writing-mode: vertical-rl;
     position: relative; 
     font-size: 150px; 
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.15);
     font-family: 'AlbraBlack';   
     white-space: nowrap;
     transform: rotate(180deg);
@@ -50,7 +50,7 @@
     top: -50px;
     left: 0;
     font-size: 5rem; 
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.15);
     font-family: 'AlbraBlack'; 
     z-index: -1;  
     white-space: nowrap;
