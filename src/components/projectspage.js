@@ -9,12 +9,14 @@ const projectData = [
   {
     title: 'VaultWise',
     description: 'Personal bankstatement tracker and AI assistant.',
-    image: VaultWiseGif
+    image: VaultWiseGif,
+    technologies: ['React', 'JavaScript', 'CSS']
   },
   {
     title: 'Project 2',
     description: 'This is a description for Project 2.',
-    image: VaultWiseGif
+    image: VaultWiseGif,
+    technologies: ['React', 'CSS']
   },
 ];
 
@@ -35,6 +37,11 @@ const Projects = () => {
                 <div className="project-info">
                   <h2 className="project-title">{project.title}</h2>
                   <p className="project-description">{project.description}</p>
+                  <div className="tech-container">
+            {project.technologies.map((tech, i) => (
+              <span key={i} className="project-tech">{tech}</span>
+            ))}
+          </div>
                 </div>
               </div>
             </div>
