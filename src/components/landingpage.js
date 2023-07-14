@@ -38,13 +38,16 @@ const LandingPage = () => {
 
   // Rendered JSX
   return (
-      <div className="container position-relative">
+      <div className="container position-relative d-flex d-md-flex">
+
+        {/* Side welcoming text */}
+        <h1 className="Welcoming-verticalText-side d-none d-lg-block">Hello I'm</h1>
+
           <div className="main-content">
-  
             {/*Heading and introduction*/}
             <div className="title-container">
               <h1 className="Title">Kyle Malice</h1>
-              <h1 className="Welcoming-verticalText-top w-100 d-md-none">Hello I'm</h1>
+              <h1 className="Welcoming-verticalText-top d-md-flex d-lg-none">Hello I'm</h1>
             </div>
             <p className="Title-Desc">Web development enthusiast, proficient in JavaScript, CSS, HTML, and React, pursuing a Bachelor's in Computer Science. Ambitious, challenge-seeking, and eager to innovate in the dynamic web industry. Simple, direct, future-focused. Let's connect.</p>
             
@@ -75,6 +78,7 @@ const LandingPage = () => {
                 <ArrowRightIcon className={`arrow ${clicked['contactButton'] ? 'clicked' : ''}`} />
               </a>
             </div>
+
           </div>
       </div>
   );

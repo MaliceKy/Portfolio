@@ -2,18 +2,21 @@
 .container {
     position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
     color: white;
-    overflow: auto;
     height: 100vh;
-    flex-direction: column;
     z-index: 2;
 }
 
 .title-container {
     position: relative;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
 }
 
 /* === TITLE STYLES === */
@@ -26,21 +29,20 @@
 .Title-Desc {
     font-family: 'AlbraBook-Light';
     font-size: 1.1rem;
-    margin-inline-end: 35%;
+    margin-inline-end: 15%;
 }
 
 /* === VERTICAL TEXT STYLES === */
 .Welcoming-verticalText-side {
-    position: relative;
-    left: 10%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
+    writing-mode: vertical-rl;
+    position: relative; 
     font-size: 150px; 
-    color: rgba(255, 255, 255, 0.15);  
-    z-index: -1;  
+    color: rgba(255, 255, 255, 0.15);    
     white-space: nowrap;
     font-family: 'IsidoraSansAlt';
-  }
+    transform: rotate(180deg);
+    left: 10%;
+}
   
  /* === HORIZONTAL TEXT STYLES === */
   .Welcoming-verticalText-top{
@@ -115,7 +117,7 @@
     transition: ease-in-out .2s;
 }
 
-/* === ANIMATION STYLES === */
+/* === CLICKED STYLES === */
 .clicked {
     animation: pulse .6s ease-in-out;
     fill: currentColor;  /* SVG will inherit this color */
@@ -135,8 +137,7 @@
     animation: pulse .6s ease-in-out;
     color: currentColor;
 }
-  
-/* Add a new keyframes animation for the pulse effect */
+
 @keyframes pulse {
     0% {
       color: rgb(54, 83, 224);
@@ -152,8 +153,7 @@
     }
   }
   
-  /* Define the animation on the clicked class */
-  .clicked {
+.clicked {
     animation: pulse .6s ease-in-out;
     fill: currentColor;
 }
