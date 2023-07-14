@@ -1,3 +1,4 @@
+/* === GENERAL STYLES === */
 .container {
     position: relative;
     display: flex;
@@ -11,6 +12,24 @@
     z-index: 2;
 }
 
+.title-container {
+    position: relative;
+}
+
+/* === TITLE STYLES === */
+.Title {
+    font-size: 3.2rem;
+    position: relative;
+    font-family: 'IsidoraSansAlt';
+}
+
+.Title-Desc {
+    font-family: 'AlbraBook-Light';
+    font-size: 1.1rem;
+    margin-inline-end: 35%;
+}
+
+/* === VERTICAL TEXT STYLES === */
 .Welcoming-verticalText-side {
     position: relative;
     left: 10%;
@@ -23,7 +42,7 @@
     font-family: 'IsidoraSansAlt';
   }
   
-  /* 'Hello I'm' for small screens (overlapped)*/
+ /* === HORIZONTAL TEXT STYLES === */
   .Welcoming-verticalText-top{
     position: absolute;
     top: -50px;
@@ -35,24 +54,8 @@
     font-family: 'IsidoraSansAlt';
   }
 
-  .title-container {
-    position: relative;
-  }
 
-/* General Info */
-.Title {
-    font-size: 3.2rem;
-    position: relative;
-    font-family: 'IsidoraSansAlt';
-}  
-
-.Title-Desc {
-    font-family: 'AlbraBook-Light';
-    font-size: 1.1rem;
-    margin-inline-end: 35%;
-}
-
-/* Socials */
+/* === SOCIAL ICON STYLES === */
 .social-icon {
     width: 25px;
     height: 25px;
@@ -66,7 +69,8 @@
     transform: scale(1.20);
     fill: rgb(54, 83, 224);
 }
-/* Button container */
+
+/* === BUTTON STYLES === */
 .buttonContainer{
     display: flex;
     flex-direction: column;
@@ -74,7 +78,6 @@
     border-left: 1px solid #ffffff;
 }
 
-/* About Me Button */
 .tabs {
     background: transparent;
     border: none;
@@ -112,7 +115,7 @@
     transition: ease-in-out .2s;
 }
 
-/* Define the animation on the clicked class */
+/* === ANIMATION STYLES === */
 .clicked {
     animation: pulse .6s ease-in-out;
     fill: currentColor;  /* SVG will inherit this color */
@@ -154,4 +157,3 @@
     animation: pulse .6s ease-in-out;
     fill: currentColor;
 }
-  

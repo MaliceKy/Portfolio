@@ -1,4 +1,4 @@
-// src/components/landingpage.js
+// Importing necessary libraries and assets
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "../assests/styles/landing.css";
@@ -7,16 +7,21 @@ import { ReactComponent as GitHubIcon } from '../assests/images/Github.svg';
 import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-right.svg';
 
 const LandingPage = () => {
+  // State initialization
   const [clicked, setClicked] = useState({});
   const [redirect, setRedirect] = useState(null);
+  
+  // Setting up router navigation
   const navigate = useNavigate();
 
+  // Handle social icon click events
   const handleSocialClick = (e, href, social) => {
     e.preventDefault();
     setClicked(prev => ({ ...prev, [social]: true }));
     setRedirect(href);
   };
 
+  // Handle click effect and redirect for social icons
   useEffect(() => {
     if (redirect) {
       setTimeout(() => {
@@ -31,16 +36,19 @@ const LandingPage = () => {
     }
   }, [redirect, clicked]);
 
+  // Rendered JSX
   return (
       <div className="container position-relative">
-          <div className="content-container">
+          <div className="main-content">
+  
+            {/*Heading and introduction*/}
             <div className="title-container">
               <h1 className="Title">Kyle Malice</h1>
               <h1 className="Welcoming-verticalText-top w-100 d-md-none">Hello I'm</h1>
             </div>
-
             <p className="Title-Desc">Web development enthusiast, proficient in JavaScript, CSS, HTML, and React, pursuing a Bachelor's in Computer Science. Ambitious, challenge-seeking, and eager to innovate in the dynamic web industry. Simple, direct, future-focused. Let's connect.</p>
-
+            
+            {/*Social icon links*/}
             <div className="row">
               <div className="col-12">
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" onClick={(e) => handleSocialClick(e, 'https://www.linkedin.com', 'linkedin')}>
@@ -52,6 +60,7 @@ const LandingPage = () => {
               </div>
             </div>
             
+            {/*Navigational buttons*/}
             <div className="buttonContainer">
               <Link to="/about" className={`tabs ${clicked['about'] ? 'clicked' : ''}`} onClick={() => navigate('/about')}>
                 <span className={`button-text ${clicked['aboutText'] ? 'clicked' : ''}`}>More About Me.</span>
@@ -67,10 +76,10 @@ const LandingPage = () => {
               </a>
             </div>
           </div>
-
       </div>
   );
 };
 
 export default LandingPage;
+
 
