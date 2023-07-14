@@ -32,11 +32,15 @@ const LandingPage = () => {
   }, [redirect, clicked]);
 
   return (
-    <div className="background">
       <div className="container position-relative">
           <div className="content-container">
-            <h1 className="Title">Kyle Malice</h1>
+            <div className="title-container">
+              <h1 className="Title">Kyle Malice</h1>
+              <h1 className="Welcoming-verticalText-top w-100 d-md-none">Hello I'm</h1>
+            </div>
+
             <p className="Title-Desc">Web development enthusiast, proficient in JavaScript, CSS, HTML, and React, pursuing a Bachelor's in Computer Science. Ambitious, challenge-seeking, and eager to innovate in the dynamic web industry. Simple, direct, future-focused. Let's connect.</p>
+
             <div className="row">
               <div className="col-12">
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" onClick={(e) => handleSocialClick(e, 'https://www.linkedin.com', 'linkedin')}>
@@ -63,8 +67,8 @@ const LandingPage = () => {
               </a>
             </div>
           </div>
+
       </div>
-    </div>
   );
 };
 

@@ -10,15 +10,39 @@
     flex-direction: column;
     z-index: 2;
 }
+
+.Welcoming-verticalText-side {
+    position: relative;
+    left: 10%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 150px; 
+    color: rgba(255, 255, 255, 0.15);  
+    z-index: -1;  
+    white-space: nowrap;
+    font-family: 'IsidoraSansAlt';
+  }
   
-.hello {
-    color: rgba(255, 255, 255, 0.199);
-    font-family: 'AlbraBlack';
-}
+  /* 'Hello I'm' for small screens (overlapped)*/
+  .Welcoming-verticalText-top{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 5rem; 
+    color: rgba(255, 255, 255, 0.15); 
+    z-index: -1;  
+    white-space: nowrap;
+    font-family: 'IsidoraSansAlt';
+  }
+
+  .title-container {
+    position: relative;
+  }
 
 /* General Info */
 .Title {
     font-size: 3.2rem;
+    position: relative;
     font-family: 'IsidoraSansAlt';
 }  
 
