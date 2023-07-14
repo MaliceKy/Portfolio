@@ -1,15 +1,16 @@
 /* This section styles the entire Navbar. It makes the Navbar fixed at the top, 
    stretches it to full width, removes the background, and adds a white border. */
    .custom-navbar {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 60px;
     background: none !important;
     z-index: 999;
     display: flex;
     align-items: flex-start;
     padding-right: 5%;
 }
+
 
 /* This section styles the links in the Navbar. It changes the text color to white, 
    removes the underline, and sets the font family. */
