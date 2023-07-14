@@ -8,6 +8,8 @@ const NavBar = () => {
 
     const handleToggle = () => setIsOpen(!isOpen);
 
+    const handleClose = () => setIsOpen(false);
+
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className="custom-navbar">
             <Navbar.Toggle 
@@ -21,9 +23,9 @@ const NavBar = () => {
             </Navbar.Toggle>
             <div className={`mobile-nav-overlay ${isOpen ? 'open' : ''}`}>
                 <Nav className="overlay-content">
-                    <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/about">About</Nav.Link>
-                    <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+                    <Nav.Link as={Link} to="/" onClick={handleClose}>Home</Nav.Link>
+                    <Nav.Link as={Link} to="/about" onClick={handleClose}>About</Nav.Link>
+                    <Nav.Link as={Link} to="/projects" onClick={handleClose}>Projects</Nav.Link>
                     <Nav.Link href="mailto:Malice.Kyle@gmail.com">Contact</Nav.Link>
                 </Nav>
             </div>
@@ -40,6 +42,7 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 
 
 
