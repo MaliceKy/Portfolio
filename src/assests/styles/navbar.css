@@ -2,8 +2,7 @@
    stretches it to full width, removes the background, and adds a white border. */
    .custom-navbar {
     position: fixed;
-    width: 50%;
-    left: 50%;
+    width: 100%;
     height: 100%;
     background: none !important;
     z-index: 999;
@@ -37,7 +36,7 @@
     border: none;
     background: none;
     cursor: pointer;
-    z-index: 999;
+    z-index: 1001;
     padding-right: 5%;
 }
 
@@ -47,7 +46,7 @@
     background-color: hsl(0, 0%, 100%);
     border-radius: 2px;
     margin: 6px 0;
-    transition: 0.4s;
+    transition: .5s;
 }
 
 .custom-toggler:focus {
@@ -72,7 +71,7 @@
     right: 0;
     bottom: 0;
     transform: translateX(100%);
-    transition: transform 0.3s ease-out;
+    transition: transform .7s ease-out;
     background: hsl(0, 0%, 15%); /* Change to desired color */
     width: 100%;
     max-width: 300px; /* Adjust as needed */
@@ -90,4 +89,52 @@
     color: #ffffff;
     font-size: 20px; /* Adjust as needed */
     margin-top: 20%;
+}
+
+.mobile-nav-overlay {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: opacity .7s;
+}
+
+.mobile-nav-overlay.open {
+    opacity: 1;
+}
+
+.overlay-content {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    transition: opacity .7s, top .7s;
+}
+
+.mobile-nav-overlay.open .overlay-content {
+    top: 25%;
+    opacity: 1;
+}
+
+.overlay-content .nav-link {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content .nav-link:hover {
+    color: #f1f1f1;
 }

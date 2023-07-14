@@ -19,8 +19,8 @@ const NavBar = () => {
                 <div></div>
                 <div></div>
             </Navbar.Toggle>
-            <div className={`mobile-nav ${isOpen ? 'open' : ''} d-lg-none`}>
-                <Nav className="ms-auto">
+            <div className={`mobile-nav-overlay ${isOpen ? 'open' : ''}`}>
+                <Nav className="overlay-content">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
                     <Nav.Link as={Link} to="/about">About</Nav.Link>
                     <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
@@ -40,4 +40,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
 
