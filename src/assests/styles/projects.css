@@ -122,3 +122,88 @@ body {
     opacity: 1;
   }
 }
+
+
+
+
+.container{
+  z-index: 1100;
+}
+
+.expanded-project {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: rgb(42, 43, 49);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  animation: slide-in-right 0.5s ease-out forwards;
+}
+
+.expanded-project img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.expanded-project h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #333; /* dark gray */
+}
+
+.expanded-project p {
+  font-size: 1.2em;
+  color: #666; /* medium gray */
+}
+
+.expanded-project .project-tech {
+  font-size: 1em;
+  color: #999; /* light gray */
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #eee; /* very light gray */
+  padding: 0.2em 0.5em;
+  border-radius: 0.3em;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.expanded-project.closing {
+  animation: slide-out-right 0.5s ease-out forwards;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.close-button {
+  align-self: flex-end;
+}
