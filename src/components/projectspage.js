@@ -25,10 +25,10 @@ const ExpandedProject = ({ project, onClose, closing }) => {
   if (!project) return null;
 
   return (
-    <div className={`overlay ${closing ? 'closing' : ''}`}>
+    <div className={`overlay ${closing ? 'closing' : ''}`} onClick={onClose}>
       <div className="container">
         <div className="row justify-content-center">
-          <div className={`col-12 col-md-5 expanded-project ${closing ? 'closing' : ''}`}>
+          <div className={`col-12 col-md-5 expanded-project ${closing ? 'closing' : ''}`} onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={onClose}>Projects 
               <ArrowRightIcon className={`arrow`} />
             </button>
