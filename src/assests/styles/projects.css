@@ -123,7 +123,18 @@ body {
   }
 }
 
-
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
 
 .container{
@@ -139,51 +150,88 @@ body {
   background: rgb(42, 43, 49);
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 5%;
+  overflow-y: auto;
   animation: slide-in-right 0.5s ease-out forwards;
+}
+
+.expanded-project.closing {
+  animation: slide-out-right 0.5s ease-out forwards;
 }
 
 .expanded-project img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  margin-bottom: 1em;
+  border-radius: 35px;
+  padding: 20px;
 }
 
 .expanded-project h2 {
+  margin-top: 5vh;
   font-size: 2em;
   margin-bottom: 0.5em;
-  color: #333; /* dark gray */
+  color: #ffffff;
+  text-align: center;
+  font-family: 'IsidoraSansAlt';
+}
+
+.expanded-project h3 {
+  font-size: 1.3em;
+  text-align: left;
+  color: #ffffff;
+  text-align: start;
+  margin-inline-start: 5%;
+  font-family: 'IsidoraSansAlt';
 }
 
 .expanded-project p {
-  font-size: 1.2em;
-  color: #666; /* medium gray */
+  font-size: 1em;
+  color: #ffffff;
+  margin-inline-start: 5%;
+  margin-inline-end: 5%;
+}
+
+.projectTechnologiesExt{
+  margin-inline-start: 5%;
+  margin-inline-end: 5%;
 }
 
 .expanded-project .project-tech {
   font-size: 1em;
-  color: #999; /* light gray */
+  color: #777777;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
-  background-color: #eee; /* very light gray */
+  background-color: #eee;
   padding: 0.2em 0.5em;
   border-radius: 0.3em;
 }
 
 .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  position: fixed;
+  width: 36%;
+  text-align: end;
+  top: 0;
+  margin-top: 20px;
   background: none;
   border: none;
-  font-size: 1.5em;
+  font-size: 1.2em;
   cursor: pointer;
+  color: white;
+  fill: white;
+  transition: ease-in-out .2s;
+  text-decoration: none;
+  font-family: 'IsidoraSansAlt';
+  font-weight: 600;
+  padding: 10px;
+  z-index: 1101;
 }
 
-.expanded-project.closing {
-  animation: slide-out-right 0.5s ease-out forwards;
+.close-button:hover{
+  color: rgb(54, 83, 224);
+  fill: rgb(54, 83, 224);
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 15px;
 }
 
 @keyframes slide-in-right {
