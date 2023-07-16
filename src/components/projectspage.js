@@ -32,6 +32,7 @@ const ExpandedProject = ({ project, onClose, closing }) => {
             <button className="close-button" onClick={onClose}>Projects 
               <ArrowRightIcon className={`arrow`} />
             </button>
+            <div className="project-contents">
             <h2>{project.title}</h2>
             <img src={project.image} alt={project.title} />
             <h3>Description:</h3>
@@ -41,6 +42,7 @@ const ExpandedProject = ({ project, onClose, closing }) => {
               {project.technologies.map((tech, i) => (
                 <span key={i} className="project-tech">{tech}</span>
               ))}
+            </div>
             </div>
           </div>
         </div>
