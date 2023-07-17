@@ -14,7 +14,8 @@ const projectData = [
     descriptionExtended: 'VaultWise is a personal bank statement tracker and emerging AI assistant. Built using React, JavaScript, and CSS, it delivers a seamless experience across devices. Users can securely sign in or explore as guests. Once in, VaultWise analyzes uploaded bank statements, summarizing income, expenses, and transactions. A dynamic graph displays monthly bank balance trends. Under development is an AI toolbox, leveraging GPT 3.5 Turbo, designed to guide users toward financial goals. Ultimately, VaultWise aims to make finance management simpler, insightful, and interactive.',
     image: VaultWiseGif,
     technologies: ['React', 'JavaScript', 'CSS'],
-    github: 'https://github.com/MaliceKy/VaultWise-Expense-AI-project'
+    github: 'https://github.com/MaliceKy/VaultWise-Expense-AI-project',
+    liveDemoLink: 'http://vaultwise.kylemalice.info/'
   },
   {
     title: 'Project 2 (WIP)',
@@ -22,7 +23,8 @@ const projectData = [
     descriptionExtended: 'Work in progress...',
     image: VaultWiseGif,
     technologies: ['React', 'CSS'],
-    github:'...'
+    github:'...',
+    liveDemoLink: '...'
   },
 ];
 
@@ -54,7 +56,7 @@ const ExpandedProject = ({ project, onClose, closing }) => {
                   <h4><GitHubIcon className={`git-icon`}/>Github</h4>
                 </div>
               </a>
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="projectLinked">
+              <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="projectLinked">
                 <div className='linkContainer'>
                   <h4><Linkout className={`link-out`}/>Live Demo</h4>
                 </div>
