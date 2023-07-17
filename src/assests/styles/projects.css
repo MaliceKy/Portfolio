@@ -2,9 +2,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
-
 .TitleProject {
   font-size: 4rem;
   font-family: 'IsidoraSansAlt';
@@ -299,6 +296,7 @@ body {
   padding-top: 5px;
   border-radius: 10px;
   margin-bottom: 10px;
+  white-space: nowrap;
   z-index: 1101;
 }
 

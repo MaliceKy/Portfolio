@@ -54,10 +54,10 @@ const LandingPage = () => {
             {/*Social icon links*/}
             <div className="row">
               <div className="col-12">
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" onClick={(e) => handleSocialClick(e, 'https://www.linkedin.com', 'linkedin')}>
+                <a href="https://www.linkedin.com/in/kyle-malice" target="_blank" rel="noopener noreferrer" onClick={(e) => handleSocialClick(e, 'https://www.linkedin.com', 'linkedin')}>
                   <LinkedInIcon className={`social-icon linkedin-icon ${clicked['linkedin'] ? 'clicked' : ''}`} />
                 </a>
-                <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" onClick={(e) => handleSocialClick(e, 'https://www.github.com', 'github')}>
+                <a href="https://github.com/MaliceKy" target="_blank" rel="noopener noreferrer" onClick={(e) => handleSocialClick(e, 'https://www.github.com', 'github')}>
                   <GitHubIcon className={`social-icon github-icon ${clicked['github'] ? 'clicked' : ''}`} />
                 </a>
               </div>
