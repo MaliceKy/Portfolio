@@ -77,7 +77,7 @@ const Projects = () => {
     setTimeout(() => {
       setSelectedProject(null);
       setClosing(false);
-    }, 500);
+    }, 275);
   };
 
   return (
