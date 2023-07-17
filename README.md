@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Kyle Malice's Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the GitHub repository of Kyle Malice's portfolio website. This project is a showcase of Kyle's skills and projects, built with React, JavaScript, CSS, and minimal HTML. The website is structured into four main pages: Home, About, Projects, and Contact.
 
-## Available Scripts
+https://kylemalice.info/
 
-In the project directory, you can run:
+## Website Flow
 
-### `npm start`
+The website consists of four main pages:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Home Page**: The landing page of the website that welcomes visitors and provides a brief introduction about Kyle.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **About Page**: This page provides more detailed information about Kyle, his skills, experiences, and interests.
 
-### `npm test`
+3. **Projects Page**: Here, you can find a showcase of Kyle's projects. Each project is presented with a brief description and relevant technologies used.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Contact Page**: This page provides a way for visitors to get in touch with Kyle via email.
 
-### `npm run build`
+Here is a diagram that represents the flow of the website:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[![Flow Chart](https://mermaid.ink/img/pako:eNplkMsOgjAQRX-FzBp-gIWJr8SNCYnurIuRjojalpSyMIR_dygPS1zN9Nzb2-m0kBtJkEJhsXpE543QUXQwii4C-hJlWJCAa4_XN9M45r6GQmbNk3JXsza1obw12mHe3xy7UPSPJMlqSF-QKWsBx4h5nj_njwbWeayAQwyKrMJS8vfb3iXAPUjxZCm3Eu1LgNAd-7Bx5vTROaTONhRDU0l0tCuRt6aWcC9LZyykd3zXDMkfj8OO_aq7L5FIew4?type=png)](https://mermaid.live/edit#pako:eNplkMsOgjAQRX-FzBp-gIWJr8SNCYnurIuRjojalpSyMIR_dygPS1zN9Nzb2-m0kBtJkEJhsXpE543QUXQwii4C-hJlWJCAa4_XN9M45r6GQmbNk3JXsza1obw12mHe3xy7UPSPJMlqSF-QKWsBx4h5nj_njwbWeayAQwyKrMJS8vfb3iXAPUjxZCm3Eu1LgNAd-7Bx5vTROaTONhRDU0l0tCuRt6aWcC9LZyykd3zXDMkfj8OO_aq7L5FIew4)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[View Diagram in New Tab](https://mermaid.ink/img/pako:eNplkMsOgjAQRX-FzBp-gIWJr8SNCYnurIuRjojalpSyMIR_dygPS1zN9Nzb2-m0kBtJkEJhsXpE543QUXQwii4C-hJlWJCAa4_XN9M45r6GQmbNk3JXsza1obw12mHe3xy7UPSPJMlqSF-QKWsBx4h5nj_njwbWeayAQwyKrMJS8vfb3iXAPUjxZCm3Eu1LgNAd-7Bx5vTROaTONhRDU0l0tCuRt6aWcC9LZyykd3zXDMkfj8OO_aq7L5FIew4?type=png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code Structure
 
-### `npm run eject`
+The website is built using React, a popular JavaScript library for building user interfaces, particularly single-page applications. React's component-based architecture allows for reusability and separation of concerns, making the codebase easier to maintain and understand.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JavaScript is used for handling dynamic content and interactivity on the website. CSS is used for styling and layout, ensuring the website is visually appealing and responsive across different devices and screen sizes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To get a local copy up and running, follow these steps:
 
-## Learn More
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To get a local copy up and running, follow these steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the repository**
 
-### Code Splitting
+   Open your terminal and use the `git clone` command to copy the repository to your local machine. Replace `your-directory` with the path where you want to clone the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   git clone https://github.com/your-username/kyle-malice-portfolio.git your-directory
+   ```
 
-### Analyzing the Bundle Size
+2. **Install the dependencies**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   Navigate into the cloned directory and install the necessary dependencies. This project uses npm (Node Package Manager) to manage dependencies.
+    ```bash
+     cd your-directory
+     npm install
+   ```
+3. **Start the development server**
 
-### Making a Progressive Web App
+   Once the dependencies are installed, you can start the development server by running:
+    ```bash
+     npm start
+   ```
+    This command starts the development server on http://localhost:3000. Open this URL in your browser to view the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    Remember to replace your-username and your-directory with your GitHub username and the directory where you want to clone the project, respectively.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    **This guide assumes that the user has Node.js and npm installed on their machine. If not, they will need to install these before they can run the project.**
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
