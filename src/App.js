@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
 import './App.css';
+import './assests/styles/scrollbar.css';
 import LandingPage from './components/landingpage';
 import About from './components/aboutpage';
 import Projects from './components/projectspage';
