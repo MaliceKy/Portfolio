@@ -89,7 +89,7 @@ const Projects = () => {
 
       <div className="row mx-auto">
         {projectData.map((project, index) => (
-          <div className="col-12 col-lg-6" key={index}>
+          <div className="col-12 col-md-6" key={index}>
             <div className="project-card mx-auto" onClick={() => setSelectedProject(project)}>
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
