@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import '../assests/styles/projects.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import VaultWiseGif from '../assests/images/VaultWise.gif'
+import { ReactComponent as GitHubIcon } from '../assests/images/Github.svg';
+import { ReactComponent as Linkout } from '../assests/images/link-out.svg';
 import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-right.svg';
 
 const projectData = [
@@ -11,13 +13,16 @@ const projectData = [
     description: 'Personal bankstatement tracker and AI assistant.',
     descriptionExtended: 'VaultWise is a personal bank statement tracker and emerging AI assistant. Built using React, JavaScript, and CSS, it delivers a seamless experience across devices. Users can securely sign in or explore as guests. Once in, VaultWise analyzes uploaded bank statements, summarizing income, expenses, and transactions. A dynamic graph displays monthly bank balance trends. Under development is an AI toolbox, leveraging GPT 3.5 Turbo, designed to guide users toward financial goals. Ultimately, VaultWise aims to make finance management simpler, insightful, and interactive.',
     image: VaultWiseGif,
-    technologies: ['React', 'JavaScript', 'CSS']
+    technologies: ['React', 'JavaScript', 'CSS'],
+    github: 'https://github.com/MaliceKy/VaultWise-Expense-AI-project'
   },
   {
-    title: 'Project 2',
+    title: 'Project 2 (WIP)',
     description: 'This is a description for Project 2.',
+    descriptionExtended: 'Work in progress...',
     image: VaultWiseGif,
-    technologies: ['React', 'CSS']
+    technologies: ['React', 'CSS'],
+    github:'...'
   },
 ];
 
@@ -42,6 +47,18 @@ const ExpandedProject = ({ project, onClose, closing }) => {
               {project.technologies.map((tech, i) => (
                 <span key={i} className="project-tech">{tech}</span>
               ))}
+            </div>
+            <div className='projectSourceLinksContainer'>
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="projectLinked">
+                <div className='linkContainer'>
+                  <h4><GitHubIcon className={`git-icon`}/>Github</h4>
+                </div>
+              </a>
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="projectLinked">
+                <div className='linkContainer'>
+                  <h4><Linkout className={`link-out`}/>Live Demo</h4>
+                </div>
+              </a>
             </div>
             </div>
           </div>
