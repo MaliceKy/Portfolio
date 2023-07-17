@@ -272,7 +272,11 @@ body {
   height: 1.2em;
   margin-bottom: 5px;
   transition: ease-in-out .2s;
-  color: white;
+  stroke: #ffffff;
+}
+
+.linkContainer:hover .link-out {
+  stroke: rgb(54, 83, 224);
 }
 
 .close-button {
