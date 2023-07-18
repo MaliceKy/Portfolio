@@ -54,15 +54,16 @@ body {
   min-height: 210px;
   width: 360px;
   overflow: hidden;
-  margin-bottom: 10px;
   border-radius: 15px;
 }
 
-.project-image img {
-  height: 100%;
-  width: 100%;
+.project-image video {
+  min-height: 210px;
+  width: 360px;
+  border-radius: 15px;
   object-fit: cover;
   transition: all 0.3s;
+  top: 0;
 }
 
 .project-info {
@@ -159,7 +160,7 @@ body {
   animation: slide-out-right 0.2s ease-out forwards;
 }
 
-.expanded-project img {
+.expanded-project video {
   width: 100%;
   height: auto;
   object-fit: cover;

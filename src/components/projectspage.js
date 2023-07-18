@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import '../assests/styles/projects.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import VaultWiseGif from '../assests/images/VaultWise.gif'
+import VaultWiseVideo from '../assests/videos/VaultWise.mp4'
 import { ReactComponent as GitHubIcon } from '../assests/images/Github.svg';
 import { ReactComponent as Linkout } from '../assests/images/link-out.svg';
 import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-right.svg';
@@ -12,7 +12,7 @@ const projectData = [
     title: 'VaultWise',
     description: 'Personal bankstatement tracker and AI assistant.',
     descriptionExtended: 'VaultWise is a personal bank statement tracker and emerging AI assistant. Built using React, JavaScript, and CSS, it delivers a seamless experience across devices. Users can securely sign in or explore as guests. Once in, VaultWise analyzes uploaded bank statements, summarizing income, expenses, and transactions. A dynamic graph displays monthly bank balance trends. Under development is an AI toolbox, leveraging GPT 3.5 Turbo, designed to guide users toward financial goals. Ultimately, VaultWise aims to make finance management simpler, insightful, and interactive.',
-    image: VaultWiseGif,
+    video: VaultWiseVideo,
     technologies: ['React', 'JavaScript', 'CSS'],
     github: 'https://github.com/MaliceKy/VaultWise-Expense-AI-project',
     liveDemoLink: 'http://vaultwise.kylemalice.info/'
@@ -21,7 +21,7 @@ const projectData = [
     title: 'Project 2 (WIP)',
     description: 'This is a description for Project 2.',
     descriptionExtended: 'Work in progress...',
-    image: VaultWiseGif,
+    video: VaultWiseVideo,
     technologies: ['React', 'CSS'],
     github:'...',
     liveDemoLink: '...'
@@ -41,7 +41,9 @@ const ExpandedProject = ({ project, onClose, closing }) => {
             </button>
             <div className="project-contents">
             <h2>{project.title}</h2>
-            <img src={project.image} alt={project.title} />
+            <video src={project.video} autoPlay loop muted playsInline className="project-video">
+              Your browser does not support the video tag.
+            </video>
             <h3>Description:</h3>
             <p>{project.descriptionExtended}</p>
             <h3>Technologies:</h3>
@@ -70,6 +72,7 @@ const ExpandedProject = ({ project, onClose, closing }) => {
   );
 };
 
+
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [closing, setClosing] = useState(false);
@@ -94,7 +97,9 @@ const Projects = () => {
           <div className="col-12 col-md-6" key={index}>
             <div className="project-card mx-auto" onClick={() => setSelectedProject(project)}>
               <div className="project-image">
-                <img src={project.image} alt={project.title} />
+                <video src={project.video} autoPlay loop muted playsInline className="project-video">
+                Your browser does not support the video tag.
+              </video>
                 <div className="project-info">
                   <h2 className="project-title">{project.title}</h2>
                   <p className="project-description">{project.description}</p>
