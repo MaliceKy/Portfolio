@@ -1,14 +1,14 @@
 # Kyle Malice's Portfolio Website
 
-Welcome to the GitHub repository of Kyle Malice's portfolio website. This project is a showcase of Kyle's skills and projects, built with React, JavaScript, CSS, and minimal HTML. The website is structured into four main pages: Home, About, Projects, and Contact.
-
 https://kylemalice.info/
+
+Welcome to the GitHub repository of Kyle Malice's portfolio website. This project is a showcase of Kyle's skills and projects, built with React, JavaScript, CSS, and minimal HTML. The website is structured into four main pages: Home, About, Projects, and Contact.
 
 ## Website Flow
 
 The website consists of four main pages:
 
-1. **Home Page**: The landing page of the website that welcomes visitors and provides a brief introduction about Kyle.
+1. **Home Page**: The website's landing page welcomes visitors and briefly introduces Kyle.
 
 2. **About Page**: This page provides more detailed information about Kyle, his skills, experiences, and interests.
 
@@ -24,14 +24,9 @@ Here is a diagram that represents the flow of the website:
 
 ## Code Structure
 
-The website is built using React, a popular JavaScript library for building user interfaces, particularly single-page applications. React's component-based architecture allows for reusability and separation of concerns, making the codebase easier to maintain and understand.
+The website uses React, a popular JavaScript library for building user interfaces, particularly single-page applications. React's component-based architecture allows for reusability and separation of concerns, making the codebase easier to maintain and understand.
 
 JavaScript is used for handling dynamic content and interactivity on the website. CSS is used for styling and layout, ensuring the website is visually appealing and responsive across different devices and screen sizes.
-
-
-## Getting Started
-
-To get a local copy up and running, follow these steps:
 
 ## Getting Started
 
