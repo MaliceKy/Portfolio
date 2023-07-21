@@ -22,8 +22,7 @@ body {
   font-family: 'AlbraBlack';
 }
 
-/* 'Hello I'm' for small screens (overlapped)*/
-.project-verticalText-top{
+.project-verticalText-top {
   position: absolute;
   top: 16vh;
   left: 0px;
@@ -104,7 +103,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap:10px;
+  gap: 10px;
 }
 
 .project-tech {
@@ -116,7 +115,6 @@ body {
   border-radius: 10px;
   margin-bottom: 4px;
 }
-
 
 @media (max-width: 991.98px) {
   .project-info {
@@ -137,8 +135,7 @@ body {
   z-index: 9999;
 }
 
-
-.container{
+.container {
   z-index: 1100;
 }
 
@@ -168,7 +165,7 @@ body {
   padding: 20px;
 }
 
-.project-contents{
+.project-contents {
   background-color: rgba(0,0,0,0.2);
   border-radius: 15px;
   margin-top: 1%;
@@ -200,7 +197,7 @@ body {
   margin-top: -.2em;
 }
 
-.projectTechnologiesExt{
+.projectTechnologiesExt {
   margin-inline-start: 5%;
   margin-inline-end: 5%;
   margin-bottom: 1.5em;
@@ -218,14 +215,20 @@ body {
 
 .expanded-project h4 {
   font-size: 1em;
-  text-align: left;
+  text-align: center;
   color: #ffffff;
   text-align: start;
   margin-inline-start: 5%;
   font-family: 'IsidoraSansAlt';
+  width: 100%;
+  height: 25px;
+  align-self: center;
+  transition: color .2s ease-in-out;
+  margin-bottom: 10px;
+  z-index: 9999;
 }
 
-.projectSourceLinksContainer{
+.projectSourceLinksContainer {
   background-color: rgba(0,0,0,0.2);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -233,28 +236,43 @@ body {
   padding-bottom: 10px;
 }
 
-.projectLinked{
+.projectLinked {
   text-decoration: none;
 }
 
 .linkContainer {
   display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.linkContainer a {
+  display: inline-block;
+  padding: 10px;
+}
+
+.linkContainer h4 {
+  display: flex;
   align-items: center;
+  line-height: 1.2em;
 }
 
 .git-icon {
-  width: 2em;
-  height: 1.2em;
+  width: 30px;
+  height: 20px;
   margin-bottom: 10px;
   fill: white;
 }
 
-.expanded-project h4 {
-  transition: color .2s ease-in-out;
+.git-icon, .link-out {
+  width: 2em;
+  height: 1.2em;
+  margin-bottom: 5px;
+  transition: ease-in-out .2s;
 }
 
-.git-icon {
-  transition: fill .2s ease-in-out;
+.link-out {
+  stroke: #ffffff;
 }
 
 .linkContainer:hover h4 {
@@ -263,14 +281,6 @@ body {
 
 .linkContainer:hover .git-icon {
   fill: rgb(54, 83, 224);
-}
-
-.link-out{
-  width: 2em;
-  height: 1.2em;
-  margin-bottom: 5px;
-  transition: ease-in-out .2s;
-  stroke: #ffffff;
 }
 
 .linkContainer:hover .link-out {
@@ -301,7 +311,7 @@ body {
   z-index: 1101;
 }
 
-.close-button:hover{
+.close-button:hover {
   color: rgb(54, 83, 224);
   fill: rgb(54, 83, 224);
 }

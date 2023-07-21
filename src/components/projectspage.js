@@ -53,16 +53,16 @@ const ExpandedProject = ({ project, onClose, closing }) => {
               ))}
             </div>
             <div className='projectSourceLinksContainer'>
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="projectLinked">
-                <div className='linkContainer'>
-                  <h4><GitHubIcon className={`git-icon`}/>Github</h4>
-                </div>
-              </a>
-              <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="projectLinked">
-                <div className='linkContainer'>
-                  <h4><Linkout className={`link-out`}/>Live Demo</h4>
-                </div>
-              </a>
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="projectLinked">
+              <div className='linkContainer'>
+                <h4><GitHubIcon className={`git-icon`}/>Github</h4>
+              </div>
+            </a>
+            <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="projectLinked" onClick={(e) => e.stopPropagation()}>
+              <div className='linkContainer'>
+                <h4><Linkout className={`link-out`}/>Live Demo</h4>
+              </div>
+            </a>
             </div>
             </div>
           </div>

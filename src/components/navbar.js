@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import '../assests/styles/navbar.css';
 
@@ -23,17 +22,17 @@ const NavBar = () => {
             </Navbar.Toggle>
             <div className={`mobile-nav-overlay ${isOpen ? 'open' : ''}`}>
                 <Nav className="overlay-content">
-                    <Nav.Link as={NavLink} to="/" exact onClick={handleClose} activeClassName="active-link">Home</Nav.Link>
-                    <Nav.Link as={NavLink} to="/about" onClick={handleClose} activeClassName="active-link">About</Nav.Link>
-                    <Nav.Link as={NavLink} to="/projects" onClick={handleClose} activeClassName="active-link">Projects</Nav.Link>
+                    <Nav.Link href="/" onClick={handleClose}>Home</Nav.Link>
+                    <Nav.Link href="/about" onClick={handleClose}>About</Nav.Link>
+                    <Nav.Link href="/projects" onClick={handleClose}>Projects</Nav.Link>
                     <Nav.Link href="mailto:Malice.Kyle@gmail.com">Contact</Nav.Link>
                 </Nav>
             </div>
             <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                 <Nav className="d-none d-lg-flex">
-                    <Nav.Link as={NavLink} to="/" exact activeClassName="active-link">Home</Nav.Link>
-                    <Nav.Link as={NavLink} to="/about" activeClassName="active-link">About</Nav.Link>
-                    <Nav.Link as={NavLink} to="/projects" activeClassName="active-link">Projects</Nav.Link>
+                    <Nav.Link href="/" onClick={handleClose}>Home</Nav.Link>
+                    <Nav.Link href="/about" onClick={handleClose}>About</Nav.Link>
+                    <Nav.Link href="/projects" onClick={handleClose}>Projects</Nav.Link>
                     <Nav.Link href="mailto:Malice.Kyle@gmail.com">Contact</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
