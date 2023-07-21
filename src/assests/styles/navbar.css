@@ -79,7 +79,7 @@
     max-width: 300px;
     padding: 20px;
     overflow: auto;
-    z-index: 990;
+    z-index: 1099;
 }
 
 .mobile-nav.open {
