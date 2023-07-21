@@ -39,7 +39,7 @@ const ExpandedProject = ({ project, onClose, closing }) => {
 
   return (
     <div className={`projectOverlay ${closing ? 'closing' : ''}`} onClick={onClose}>
-      <div className="container">
+      <div className="ProjectContainer">
         <div className="row justify-content-center">
           <div className={`col-12 col-md-5 expanded-project ${closing ? 'closing' : ''}`} onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={onClose}>Projects 
