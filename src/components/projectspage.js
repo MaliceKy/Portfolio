@@ -11,7 +11,13 @@ const projectData = [
   {
     title: 'VaultWise',
     description: 'Personal bankstatement tracker and AI assistant.',
-    descriptionExtended: 'VaultWise is a personal bank statement tracker and emerging AI assistant. Built using React, JavaScript, and CSS, it delivers a seamless experience across devices. Users can securely sign in or explore as guests. Once in, VaultWise analyzes uploaded bank statements, summarizing income, expenses, and transactions. A dynamic graph displays monthly bank balance trends. Under development is an AI toolbox, leveraging GPT 3.5 Turbo, designed to guide users toward financial goals. Ultimately, VaultWise aims to make finance management simpler, insightful, and interactive.',
+    descriptionExtended: (
+      <>
+        VaultWise is a personal bank statement tracker and emerging AI assistant. Built using React, JavaScript, and CSS, it delivers a seamless experience across devices. Users can securely sign in or explore as guests. Once in, VaultWise analyzes uploaded bank statements, summarizing income, expenses, and transactions. A dynamic graph displays monthly bank balance trends. Under development is an AI toolbox, leveraging GPT 3.5 Turbo, designed to guide users toward financial goals. Ultimately, VaultWise aims to make finance management simpler, insightful, and interactive. A fake bankstatement csv file is provided for the full VaultWise experience. 
+        <br />
+        <a className="CSVdownload" href="/VaultWiseExampleCSV.csv" download>Download CSV</a>
+      </>
+    ),
     video: VaultWiseVideo,
     technologies: ['React', 'JavaScript', 'CSS'],
     github: 'https://github.com/MaliceKy/VaultWise-Expense-AI-project',
@@ -44,25 +50,29 @@ const ExpandedProject = ({ project, onClose, closing }) => {
             <video src={project.video} autoPlay loop muted playsInline className="project-video">
               Your browser does not support the video tag.
             </video>
-            <h3>Description:</h3>
-            <p>{project.descriptionExtended}</p>
-            <h3>Technologies:</h3>
-            <div className="projectTechnologiesExt">
-              {project.technologies.map((tech, i) => (
-                <span key={i} className="project-tech">{tech}</span>
-              ))}
+            <div className="DescriptionContainer">
+              <h3>Description:</h3>
+              <p>{project.descriptionExtended}</p>
+            </div>
+            <div className="TechnologyContainer">
+              <h3>Technologies:</h3>
+              <div className="projectTechnologiesExt">
+                {project.technologies.map((tech, i) => (
+                  <span key={i} className="project-tech">{tech}</span>
+                ))}
+              </div>
             </div>
             <div className='projectSourceLinksContainer'>
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="projectLinked">
-              <div className='linkContainer'>
-                <h4><GitHubIcon className={`git-icon`}/>Github</h4>
-              </div>
-            </a>
-            <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="projectLinked" onClick={(e) => e.stopPropagation()}>
-              <div className='linkContainer'>
-                <h4><Linkout className={`link-out`}/>Live Demo</h4>
-              </div>
-            </a>
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="projectLinkedGithub">
+                <div className='linkContainerGithub'>
+                  <h4><GitHubIcon className={`git-icon`}/>Github</h4>
+                </div>
+              </a>
+              <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="projectLinkedLiveDemo" onClick={(e) => e.stopPropagation()}>
+                <div className='linkContainerLiveDemo'>
+                  <h4><Linkout className={`link-out`}/>Live Demo</h4>
+                </div>
+              </a>
             </div>
             </div>
           </div>
@@ -86,7 +96,7 @@ const Projects = () => {
   };
 
   return (
-    <div>
+    <div className="ProjectsPage">
       <h1 className='TitleProject'>Projects.</h1>
 
       <h1 className="project-verticalText-top w-100 d-md-none">Projects.</h1>

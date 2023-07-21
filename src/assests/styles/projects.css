@@ -2,6 +2,10 @@ body {
   overflow-x: hidden;
 }
 
+.ProjectsPage{
+  z-index: 999;
+}
+
 .TitleProject {
   font-size: 4rem;
   font-family: 'IsidoraSansAlt';
@@ -132,7 +136,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 1099;
 }
 
 .container {
@@ -179,9 +183,17 @@ body {
   font-family: 'IsidoraSansAlt';
 }
 
+.DescriptionContainer{
+  margin-bottom: 3em;
+  position: relative;
+}
+
+.TechnologyContainer{
+  margin-bottom: 2em;
+  position: relative;
+}
 .expanded-project h3 {
   font-size: 1.3em;
-  margin-top: 1.5em;
   text-align: left;
   color: #ffffff;
   text-align: start;
@@ -197,13 +209,23 @@ body {
   margin-top: -.2em;
 }
 
+.CSVdownload{
+  position: relative;
+  top: 10px;
+  transition: ease-in-out .35s;
+}
+
+.CSVdownload:hover{
+  background-color: rgb(187, 187, 187);
+}
+
 .projectTechnologiesExt {
   margin-inline-start: 5%;
   margin-inline-end: 5%;
   margin-bottom: 1.5em;
 }
 
-.expanded-project .project-tech {
+.expanded-project .project-tech, .CSVdownload {
   font-size: 1em;
   color: #494949;
   margin-right: 0.5em;
@@ -211,6 +233,8 @@ body {
   background-color: #eee;
   padding: 0.4em;
   border-radius: 0.3em;
+  font-family: 'IsidoraSansAlt';
+  text-decoration: none;
 }
 
 .expanded-project h4 {
@@ -225,7 +249,6 @@ body {
   align-self: center;
   transition: color .2s ease-in-out;
   margin-bottom: 10px;
-  z-index: 9999;
 }
 
 .projectSourceLinksContainer {
@@ -234,24 +257,21 @@ body {
   border-bottom-right-radius: 15px;
   padding-top: 20px;
   padding-bottom: 10px;
+  position: relative;
 }
 
-.projectLinked {
+.projectLinkedGithub, .projectLinkedLiveDemo {
   text-decoration: none;
 }
 
-.linkContainer {
+.linkContainerGithub, .linkContainerLiveDemo {
   display: flex;
   align-items: center; 
   justify-content: space-between;
+  margin-top: 8px;
 }
 
-.linkContainer a {
-  display: inline-block;
-  padding: 10px;
-}
-
-.linkContainer h4 {
+.linkContainerGithub h4, .linkContainerLiveDemo h4 {
   display: flex;
   align-items: center;
   line-height: 1.2em;
@@ -267,7 +287,7 @@ body {
 .git-icon, .link-out {
   width: 2em;
   height: 1.2em;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   transition: ease-in-out .2s;
 }
 
@@ -275,15 +295,15 @@ body {
   stroke: #ffffff;
 }
 
-.linkContainer:hover h4 {
+.linkContainerGithub:hover h4, .linkContainerLiveDemo:hover h4 {
   color: rgb(54, 83, 224);
 }
 
-.linkContainer:hover .git-icon {
+.linkContainerGithub:hover, .linkContainerGithub:hover .git-icon {
   fill: rgb(54, 83, 224);
 }
 
-.linkContainer:hover .link-out {
+.linkContainerGithub:hover, .linkContainerLiveDemo:hover .link-out {
   stroke: rgb(54, 83, 224);
 }
 
