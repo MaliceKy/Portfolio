@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import '../assests/styles/projects.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import VaultWiseVideo from '../assests/videos/VaultWise.mp4'
+import VaultWiseVideo from '../assests/videos/VaultWise.webm'
+import ParkingPanicVideo from '../assests/videos/ParkingPanic.webm'
 import { ReactComponent as GitHubIcon } from '../assests/images/Github.svg';
 import { ReactComponent as Linkout } from '../assests/images/link-out.svg';
 import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-right.svg';
@@ -24,12 +25,18 @@ const projectData = [
     liveDemoLink: 'http://vaultwise.kylemalice.info/'
   },
   {
-    title: 'Project 2 (WIP)',
-    description: 'This is a description for Project 2.',
-    descriptionExtended: 'Work in progress...',
-    video: VaultWiseVideo,
-    technologies: ['React', 'CSS'],
-    github:'...',
+    title: 'Parking Panic',
+    description: 'Fast-paced, top-down pixel art web game.',
+    descriptionExtended: (
+      <>
+        Parking Panic is a web-based, top-down pixel art parking simulator developed collaboratively with a group of friends. The game is built entirely using JavaScript, HTML, and CSS. I was responsible for implementing the car's movement mechanics, collision detection, dynamic resizing of the game, and designing various assets such as obstacles and animations. The objective of the game is to navigate through an increasingly challenging map without losing all your lives by crashing into obstacles. Players progress through infinite rounds by dodging hazards and successfully parking in a randomized parking spot that glows on the map.
+        <br /><br />
+        The game features two difficulty modes: Easy and Hard. In Easy mode, players have more lives, which reset each round, and face slower speeds with fewer obstacles. In contrast, Hard mode limits players to 3 lives that do not reset between rounds, along with higher speeds and a greater number of obstacles to avoid. The game tests players' reflexes and precision as they strive to reach higher rounds and perfect their parking skills.
+      </>
+    ),
+    video: ParkingPanicVideo,
+    technologies: ['Javascript', 'HTML', 'CSS'],
+    github:'https://github.com/MaliceKy/Parking-Panic',
     liveDemoLink: '...'
   },
 ];
