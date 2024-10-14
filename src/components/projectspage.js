@@ -37,7 +37,7 @@ const projectData = [
     video: ParkingPanicVideo,
     technologies: ['Javascript', 'HTML', 'CSS'],
     github:'https://github.com/MaliceKy/Parking-Panic',
-    liveDemoLink: '...'
+    liveDemoLink: 'http://parkingpanic.kylemalice.info'
   },
 ];
 
