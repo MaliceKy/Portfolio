@@ -23,27 +23,27 @@ const About = () => {
                 <div className="about-content-container">
                     <div className="glass">
                         <h1 className="about-Title">Who am I?</h1>
-                        <p className="about-Title-Desc">Hello, I'm Kyle Malice, a dedicated Computer and Information Science student with a deep-rooted passion for technology and its transformative power. Born and raised in Delaware, I've always been driven by curiosity and a desire to step out of my comfort zone. This adventurous spirit has led me to the dynamic field of front-end development, where I constantly embrace new challenges and learning opportunities. Alongside my technical skills, I bring a strong set of soft skills to the table, including problem-solving, effective communication, and teamwork.</p>
+                        <p className="about-Title-Desc">Hello, I’m Kyle Malice, a passionate Computer Science student at the University of Delaware. Born and raised in Delaware, my curiosity for technology has driven me to explore a wide range of development fields. From front-end web development to mobile app creation with React Native, I thrive on tackling diverse challenges. I’m always eager to step out of my comfort zone, continuously growing my technical expertise. Along with a solid foundation in coding, I bring strong problem-solving abilities, clear communication, and teamwork to every project I take on.</p>
                     </div>
 
                     <div className="glass">
                         <h1 className="about-Title">Skills.</h1>
-                        <p className="about-Title-Desc">My academic and personal pursuits have equipped me with proficiency in several programming languages and technologies. I am adept at JavaScript, React, HTML, and CSS, which are crucial for front-end development. Additionally, my knowledge extends to Java and C++, gained from my Computer Science courses. Beyond coding, I have a firm grasp on other aspects of technology, including building computers and troubleshooting various tech issues.</p>
+                        <p className="about-Title-Desc">My academic and personal pursuits have equipped me with proficiency in several programming languages and technologies. I am highly skilled in JavaScript, React, HTML, CSS, and more recently, React Native, which I’ve deepened through my internship at Clinical Ink, where I worked on their iOS and Android applications. Beyond coding, I have a strong understanding of building computers and troubleshooting various tech issues, making me versatile in the tech landscape.</p>
                     </div>
 
                     <div className="glass">
                         <h1 className="about-Title">Education.</h1>
                         <p className="about-Title-Desc"> 
-                            - Delaware Technical Community College: Enrolled in 2020, completing coursework in 2023.
+                            - Associate's Degree from Delaware Technical Community College, obtained in 2024.
                             <br />
-                            - University of Delaware: Attending from 2024 to 2025, pursuing a Bachelor's degree in Computer and Information Sciences. 
+                            - Bachelor's Degree in Computer Science from the University of Delaware, expected May 2025.
                         </p>
                     </div>
 
 
                     <div className="glass">
                         <h1 className="about-Title">Hobbies.</h1>
-                        <p className="about-Title-Desc">Outside of my academic and professional interests, I am passionate about health and fitness. I believe in the importance of a balanced lifestyle, and I am currently preparing to compete in a natural bodybuilding show. This hobby not only keeps me physically fit but also instills discipline and perseverance, qualities that I believe are equally important in my professional life.</p>
+                        <p className="about-Title-Desc">Outside of my academic and professional interests, I am passionate about health and fitness. I enjoy skiing, watching movies and TV shows, and love spending time coding and creating mods for video games. These hobbies not only keep me active and creative but also reinforce the discipline, focus, and problem-solving skills I bring to my work.</p>
                     </div>
 
                     <div className="about-buttonContainer">

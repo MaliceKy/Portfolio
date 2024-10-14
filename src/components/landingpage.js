@@ -49,7 +49,7 @@ const LandingPage = () => {
               <h1 className="Title">Kyle Malice</h1>
               <h1 className="Welcoming-verticalText-top d-md-flex d-lg-none">Hello I'm</h1>
             </div>
-            <p className="Title-Desc">Web development enthusiast, proficient in JavaScript, CSS, HTML, and React, pursuing a Bachelor's in Computer Science. Ambitious, challenge-seeking, and eager to innovate in the dynamic web industry. Simple, direct, future-focused. Let's connect.</p>
+            <p className="Title-Desc">Senior at the University of Delaware, graduating in May 2025 with a Bachelor's in Computer Science. I work with React, React Native, JavaScript, HTML, and CSS. Passionate about making a big impact and always eager to learn and grow. Let’s build something meaningful together!</p>
             
             {/*Social icon links*/}
             <div className="row">
