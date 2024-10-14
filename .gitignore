@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore resume PDF
+/public/KyleMalice-Resume-2024.pdf

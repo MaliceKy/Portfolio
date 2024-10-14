@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import '../assests/styles/navbar.css';
 
+
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -25,7 +26,9 @@ const NavBar = () => {
                     <Nav.Link href="/" onClick={handleClose}>Home</Nav.Link>
                     <Nav.Link href="/about" onClick={handleClose}>About</Nav.Link>
                     <Nav.Link href="/projects" onClick={handleClose}>Projects</Nav.Link>
-                    <Nav.Link href="mailto:Malice.Kyle@gmail.com">Contact</Nav.Link>
+                    <Nav.Link href="/KyleMalice-Resume-2024.pdf" target="_blank" rel="noopener noreferrer" onClick={handleClose}>
+  Resume
+</Nav.Link>                   <Nav.Link href="mailto:Malice.Kyle@gmail.com">Contact</Nav.Link>
                 </Nav>
             </div>
             <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
@@ -33,6 +36,9 @@ const NavBar = () => {
                     <Nav.Link href="/" onClick={handleClose}>Home</Nav.Link>
                     <Nav.Link href="/about" onClick={handleClose}>About</Nav.Link>
                     <Nav.Link href="/projects" onClick={handleClose}>Projects</Nav.Link>
+                    <Nav.Link href="/KyleMalice-Resume-2024.pdf" target="_blank" rel="noopener noreferrer" onClick={handleClose}>
+  Resume
+</Nav.Link>
                     <Nav.Link href="mailto:Malice.Kyle@gmail.com">Contact</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
