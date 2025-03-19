@@ -1,0 +1,48 @@
+{
+  "pageTitle": "About Me.",
+  "sections": {
+    "whoAmI": {
+      "title": "Who am I?",
+      "content": "Hello, I'm Kyle Malice, a passionate Computer Science student at the University of Delaware. Born and raised in Delaware, my curiosity for technology has driven me to explore a wide range of development fields. From front-end web development to mobile app creation with React Native, I thrive on tackling diverse challenges. I'm always eager to step out of my comfort zone, continuously growing my technical expertise. Along with a solid foundation in coding, I bring strong problem-solving abilities, clear communication, and teamwork to every project I take on."
+    },
+    "experience": {
+      "title": "Experience.",
+      "content": "Engineering Intern, Clinical Ink (May 2024 - Feb 2025)\n  - Refactored JavaScript code to TypeScript and implemented modern React Native hooks, improving code maintainability and performance.\n  - Migrated and integrated a new API into a deprecated React notification library, ensuring seamless functionality.\n  - Collaborated on a cross-functional team to improve documentation and participate in architecture discussions."
+    },
+    "skills": {
+      "title": "Skills.",
+      "content": "My academic and personal pursuits have equipped me with proficiency in several programming languages and technologies. I am highly skilled in Angular, React Native, TypeScript, JavaScript, HTML, and CSS."
+    },
+    "education": {
+      "title": "Education.",
+      "content": "- Bachelor's Degree in Computer Science from the University of Delaware, expected May 2025. \n- Associate's Degree from Delaware Technical Community College, obtained in 2024."
+    },
+    "hobbies": {
+      "title": "Hobbies.",
+      "content": "Outside of my academic and professional interests, I am passionate about health and fitness. I enjoy skiing, watching movies and TV shows, and love spending time coding and creating mods for video games. These hobbies not only keep me active and creative but also reinforce the discipline, focus, and problem-solving skills I bring to my work."
+    }
+  },
+  "navigation": [
+    {
+      "text": "Past Projects.",
+      "to": "/projects",
+      "isExternal": false
+    },
+    {
+      "text": "Back to Home.",
+      "to": "/",
+      "isExternal": false
+    },
+    {
+      "text": "View My Resume.",
+      "to": "RESUME_URL_PLACEHOLDER",
+      "isExternal": true,
+      "isNewTab": true
+    },
+    {
+      "text": "Get In Contact.",
+      "to": "EMAIL_PLACEHOLDER",
+      "isExternal": true
+    }
+  ]
+} 

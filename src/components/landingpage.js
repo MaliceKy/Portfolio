@@ -5,6 +5,7 @@ import "../assests/styles/landing.css";
 import { ReactComponent as LinkedInIcon } from '../assests/images/LinkedIn.svg';
 import { ReactComponent as GitHubIcon } from '../assests/images/Github.svg';
 import { ReactComponent as ArrowRightIcon } from '../assests/images/angle-small-right.svg';
+import landingData from '../data/landing.json';
 
 const LandingPage = () => {
   // State initialization
@@ -36,49 +37,76 @@ const LandingPage = () => {
     }
   }, [redirect, clicked]);
 
+  // Map for social icons
+  const socialIcons = {
+    'linkedin': LinkedInIcon,
+    'github': GitHubIcon
+  };
+
   // Rendered JSX
   return (
       <div className="container position-relative d-flex d-md-flex">
 
         {/* Side welcoming text */}
-        <h1 className="Welcoming-verticalText-side d-none d-lg-block">Hello I'm</h1>
+        <h1 className="Welcoming-verticalText-side d-none d-lg-block">{landingData.welcomeText}</h1>
 
           <div className="main-content">
             {/*Heading and introduction*/}
             <div className="title-container">
-              <h1 className="Title">Kyle Malice</h1>
-              <h1 className="Welcoming-verticalText-top d-md-flex d-lg-none">Hello I'm</h1>
+              <h1 className="Title">{landingData.title}</h1>
+              <h1 className="Welcoming-verticalText-top d-md-flex d-lg-none">{landingData.welcomeText}</h1>
             </div>
-            <p className="Title-Desc">Senior at the University of Delaware, graduating in May 2025 with a Bachelor's in Computer Science. I work with React, React Native, JavaScript, HTML, and CSS. Passionate about making a big impact and always eager to learn and grow. Let’s build something meaningful together!</p>
+            <p className="Title-Desc">{landingData.description}</p>
             
             {/*Social icon links*/}
             <div className="row">
               <div className="col-12">
-                <a href="https://www.linkedin.com/in/kyle-malice" target="_blank" rel="noopener noreferrer" onClick={(e) => handleSocialClick(e, 'https://www.linkedin.com', 'linkedin')}>
-                  <LinkedInIcon className={`social-icon linkedin-icon ${clicked['linkedin'] ? 'clicked' : ''}`} />
-                </a>
-                <a href="https://github.com/MaliceKy" target="_blank" rel="noopener noreferrer" onClick={(e) => handleSocialClick(e, 'https://www.github.com', 'github')}>
-                  <GitHubIcon className={`social-icon github-icon ${clicked['github'] ? 'clicked' : ''}`} />
-                </a>
+                {landingData.socialLinks.map((social, index) => {
+                  const SocialIcon = socialIcons[social.name];
+                  return (
+                    <a 
+                      key={index}
+                      href={social.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      onClick={(e) => handleSocialClick(e, social.apiUrl, social.name)}
+                    >
+                      <SocialIcon className={`social-icon ${social.name}-icon ${clicked[social.name] ? 'clicked' : ''}`} />
+                    </a>
+                  );
+                })}
               </div>
             </div>
             
             {/*Navigational buttons*/}
             <div className="buttonContainer">
-              <Link to="/about" className={`tabs ${clicked['about'] ? 'clicked' : ''}`} onClick={() => navigate('/about')}>
-                <span className={`button-text ${clicked['aboutText'] ? 'clicked' : ''}`}>More About Me.</span>
-                <ArrowRightIcon className={`arrow ${clicked['aboutButton'] ? 'clicked' : ''}`} />
-              </Link>
-              <Link to="/projects" className={`tabs ${clicked['projects'] ? 'clicked' : ''}`} onClick={() => navigate('/projects')}>
-                <span className={`button-text ${clicked['projectsText'] ? 'clicked' : ''}`}>Past Projects.</span>
-                <ArrowRightIcon className={`arrow ${clicked['projectsButton'] ? 'clicked' : ''}`} />
-              </Link>
-              <a href="mailto:Malice.Kyle@gmail.com" className={`tabs ${clicked['contact'] ? 'clicked' : ''}`}>
-                <span className={`button-text ${clicked['contactText'] ? 'clicked' : ''}`}>Get In Contact.</span>
-                <ArrowRightIcon className={`arrow ${clicked['contactButton'] ? 'clicked' : ''}`} />
-              </a>
+              {landingData.navigation.map((nav, index) => {
+                if (nav.isExternal) {
+                  return (
+                    <a 
+                      key={index}
+                      href={nav.to} 
+                      className={`tabs ${clicked[nav.text] ? 'clicked' : ''}`}
+                    >
+                      <span className={`button-text ${clicked[`${nav.text}Text`] ? 'clicked' : ''}`}>{nav.text}</span>
+                      <ArrowRightIcon className={`arrow ${clicked[`${nav.text}Button`] ? 'clicked' : ''}`} />
+                    </a>
+                  );
+                } else {
+                  return (
+                    <Link 
+                      key={index}
+                      to={nav.to} 
+                      className={`tabs ${clicked[nav.text] ? 'clicked' : ''}`} 
+                      onClick={() => navigate(nav.to)}
+                    >
+                      <span className={`button-text ${clicked[`${nav.text}Text`] ? 'clicked' : ''}`}>{nav.text}</span>
+                      <ArrowRightIcon className={`arrow ${clicked[`${nav.text}Button`] ? 'clicked' : ''}`} />
+                    </Link>
+                  );
+                }
+              })}
             </div>
-
           </div>
       </div>
   );

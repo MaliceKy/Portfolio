@@ -1,0 +1,34 @@
+{
+  "title": "Kyle Malice",
+  "welcomeText": "Hello I'm",
+  "description": "Senior at the University of Delaware, graduating in May 2025 with a Bachelor's in Computer Science. I work with React, React Native, JavaScript, HTML, and CSS. Passionate about making a big impact and always eager to learn and grow. Let's build something meaningful together!",
+  "socialLinks": [
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/kyle-malice",
+      "apiUrl": "https://www.linkedin.com"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/MaliceKy",
+      "apiUrl": "https://www.github.com"
+    }
+  ],
+  "navigation": [
+    {
+      "text": "More About Me.",
+      "to": "/about",
+      "isExternal": false
+    },
+    {
+      "text": "Past Projects.",
+      "to": "/projects",
+      "isExternal": false
+    },
+    {
+      "text": "Get In Contact.",
+      "to": "mailto:Malice.Kyle@gmail.com",
+      "isExternal": true
+    }
+  ]
+} 
